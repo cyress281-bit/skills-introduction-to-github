@@ -23,7 +23,6 @@
 # Logs and databases #
 ######################
 *.log
-*.sql
 *.sqlite
 
 # OS generated files #
@@ -35,3 +34,18 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Expo / React Native #
+########################
+node_modules/
+.expo/
+dist/
+build/
+*.env
+!.env.example
+web-build/
+ios/
+android/
+
+# Note: *.sql is listed above but schema.sql is tracked intentionally
+
