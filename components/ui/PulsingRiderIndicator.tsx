@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Text, Animated, StyleSheet } from 'react-native';
+import { View, Animated, StyleSheet } from 'react-native';
 import { Colors } from '../../constants/Colors';
 
 interface PulsingRiderIndicatorProps {
   riderCount: number;
 }
 
-export function PulsingRiderIndicator({ riderCount }: PulsingRiderIndicatorProps) {
+/** Animated radar ring – conveys "live scanning" next to the rider count text. */
+export function PulsingRiderIndicator({ riderCount: _riderCount }: PulsingRiderIndicatorProps) {
   const pulseAnim = useRef(new Animated.Value(1)).current;
   const scaleAnim = useRef(new Animated.Value(1)).current;
 
@@ -62,39 +63,31 @@ export function PulsingRiderIndicator({ riderCount }: PulsingRiderIndicatorProps
         ]}
       />
       <View style={styles.innerDot} />
-      <Text style={styles.count}>{riderCount}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    width: 36,
-    height: 36,
+    width: 28,
+    height: 28,
     alignItems: 'center',
     justifyContent: 'center',
   },
   radarRing: {
     position: 'absolute',
-    width: 36,
-    height: 36,
-    borderRadius: 18,
+    width: 28,
+    height: 28,
+    borderRadius: 14,
     borderWidth: 2,
     borderColor: Colors.neonGreen,
     backgroundColor: Colors.neonGreenGlow,
   },
   innerDot: {
-    width: 10,
-    height: 10,
-    borderRadius: 5,
+    width: 8,
+    height: 8,
+    borderRadius: 4,
     backgroundColor: Colors.neonGreen,
     position: 'absolute',
-  },
-  count: {
-    color: Colors.neonGreen,
-    fontSize: 10,
-    fontWeight: '700',
-    position: 'absolute',
-    bottom: -14,
   },
 });

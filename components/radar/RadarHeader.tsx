@@ -86,16 +86,17 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
   },
   centerArea: {
+    flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    gap: 6,
     flex: 1,
+    justifyContent: 'center',
   },
   riderText: {
     color: Colors.textPrimary,
     fontSize: 12,
     fontWeight: '600',
     letterSpacing: 0.3,
-    marginTop: 14,
   },
   rightArea: {
     flex: 1,

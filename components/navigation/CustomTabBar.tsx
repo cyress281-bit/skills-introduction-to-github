@@ -9,11 +9,12 @@ import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '../../constants/Colors';
 
+// Tab icon & label mappings – using distinctive Unicode glyphs
 const TAB_ICONS: Record<string, string> = {
-  index: '◎',
-  rides: '⊙',
-  community: '◉',
-  profile: '○',
+  index: '📡',
+  rides: '🏍️',
+  community: '👥',
+  profile: '👤',
 };
 
 const TAB_LABELS: Record<string, string> = {
@@ -23,7 +24,7 @@ const TAB_LABELS: Record<string, string> = {
   profile: 'Profile',
 };
 
-export function CustomTabBar({ state, descriptors, navigation }: BottomTabBarProps) {
+export function CustomTabBar({ state, navigation }: BottomTabBarProps) {
   const insets = useSafeAreaInsets();
 
   return (
@@ -106,9 +107,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(57, 255, 20, 0.1)',
   },
   icon: {
-    fontSize: 18,
+    fontSize: 16,
     color: Colors.textMuted,
     marginBottom: 2,
+    textAlign: 'center',
   },
   iconActive: {
     color: Colors.neonGreen,
