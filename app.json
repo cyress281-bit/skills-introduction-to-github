@@ -4,6 +4,21 @@
     "slug": "ride-radar",
     "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0D0D0D"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0D0D0D"
+      }
+    },
+    "web": {
+      "bundler": "metro"
     "scheme": "rideradar",
     "userInterfaceStyle": "dark",
     "backgroundColor": "#0D0D0D",
