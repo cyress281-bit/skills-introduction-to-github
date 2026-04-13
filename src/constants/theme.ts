@@ -17,7 +17,7 @@ export const Theme = {
   spacing: Spacing,
   borderRadii: BorderRadii,
 
-  /** Convenience: the primary accent colour for quick access */
+  /** Convenience: the primary accent color for quick access */
   accentColor: Colors.primary,
 
   /** Navigation / tab-bar overrides */
