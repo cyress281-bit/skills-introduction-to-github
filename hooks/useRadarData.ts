@@ -10,11 +10,12 @@ export function useRadarData() {
   const [isLive, setIsLive] = useState(true);
 
   useEffect(() => {
-    // Simulate live updates every 30 seconds
-    // In production: subscribe to Supabase realtime channels
+    // Pulse the live indicator every 30 seconds to show the radar is active.
+    // In production: subscribe to Supabase realtime channels and update pins here.
     // supabase.channel('radar').on('broadcast', ...).subscribe()
     const interval = setInterval(() => {
-      setIsLive((prev) => prev);
+      setIsLive(false);
+      setTimeout(() => setIsLive(true), 300);
     }, 30000);
 
     return () => clearInterval(interval);
