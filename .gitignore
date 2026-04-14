@@ -39,3 +39,60 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node / Expo / React Native #
+###############################
+node_modules/
+.expo/
+dist/
+web-build/
+*.jsbundle
+*.tsbuildinfo
+# Expo / React Native #
+########################
+node_modules/
+.expo/
+dist/
+build/
+*.env
+!.env.example
+web-build/
+ios/
+android/
+
+# Note: *.sql is listed above but schema.sql is tracked intentionally
+
